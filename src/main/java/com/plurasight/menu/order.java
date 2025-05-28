@@ -24,7 +24,7 @@ public class order {
                 System.out.println("working on adding sandwich");
                 break;
             case 2:
-                System.out.println("working on adding drink");
+                orderList.add(OrderPrompter.DrinkPrompter());
                 break;
             case 3:
                 orderList.add(OrderPrompter.ChipPrompter());

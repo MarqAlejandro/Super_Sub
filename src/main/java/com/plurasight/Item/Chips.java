@@ -3,8 +3,8 @@ package com.plurasight.Item;
 import com.plurasight.abstraction.Item;
 
 public class Chips extends Item {
-    public Chips(double price) {
-        super(price);
+    public Chips(double price, String nameBrand) {
+        super(price, nameBrand);
     }
 
     @Override

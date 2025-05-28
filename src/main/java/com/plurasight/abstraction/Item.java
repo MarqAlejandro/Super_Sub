@@ -3,14 +3,17 @@ package com.plurasight.abstraction;
 public abstract class Item {
     protected double price;
     //protected int itemID;
+    protected String nameBrand;   //can be used for specific brands
 
-    public Item(double price, int itemID) {
+    public Item(double price, int itemID, String nameBrand) {
         this.price = price;
         //this.itemID = itemID;
+        this.nameBrand = nameBrand;
     }
 
-    public Item(double price){
+    public Item(double price, String nameBrand){
         this.price = price;
+        this.nameBrand = nameBrand;
     }
 
     public Item() {
@@ -32,4 +35,12 @@ public abstract class Item {
     }
 
      */
+
+    public String getNameBrand() {
+        return nameBrand;
+    }
+
+    public void setNameBrand(String nameBrand) {
+        this.nameBrand = nameBrand;
+    }
 }
