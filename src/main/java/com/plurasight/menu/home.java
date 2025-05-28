@@ -1,6 +1,6 @@
 package com.plurasight.menu;
 
-import com.plurasight.UI.HomeScreenPrompter;
+import com.plurasight.UI.ScreenPrompter;
 import com.plurasight.UI.InputPrompter;
 
 import java.util.Scanner;
@@ -27,12 +27,12 @@ public class home {
     }
 
     public static void homeScreen(){
-            HomeScreenPrompter.screen();
+            ScreenPrompter.homeScreen();
             int HomeScreenSelection = InputPrompter.getIntInput();
 
             switch (HomeScreenSelection) {
                 case 1:
-                    System.out.println("working on order screen");
+                    order.orderScreen();
                     break;
                 case 2:
                     exit();

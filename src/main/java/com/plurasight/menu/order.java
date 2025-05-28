@@ -1,5 +1,47 @@
 package com.plurasight.menu;
 
+import com.plurasight.UI.DecisionPrompter;
+import com.plurasight.UI.InputPrompter;
+import com.plurasight.UI.ScreenPrompter;
+import com.plurasight.abstraction.Item;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class order {
 
+    public static List<Item> orderList = new ArrayList<>();
+
+
+
+    public static void orderScreen(){
+        ScreenPrompter.orderScreen();
+        int OrderScreenSelection = InputPrompter.getIntInput();
+
+        switch (OrderScreenSelection) {
+            case 1:
+                System.out.println("working on adding sandwich");
+                break;
+            case 2:
+                System.out.println("working on adding drink");
+                break;
+            case 3:
+                orderList.add(DecisionPrompter.ChipPrompter());
+                orderScreen();
+                break;
+            case 4:
+                System.out.println("working on Check-Out");
+                break;
+            case 5:
+                System.out.println("Exiting to Home Screen...");
+                home.homeScreen();
+                break;
+            default:
+                System.out.println("Input was not one of the following. Please Try Again");
+                orderScreen();
+        }
+
+
+
+    }
 }

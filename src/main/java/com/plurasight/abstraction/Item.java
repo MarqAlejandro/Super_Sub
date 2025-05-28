@@ -2,11 +2,15 @@ package com.plurasight.abstraction;
 
 public abstract class Item {
     protected double price;
-    protected int itemID;
+    //protected int itemID;
 
     public Item(double price, int itemID) {
         this.price = price;
-        this.itemID = itemID;
+        //this.itemID = itemID;
+    }
+
+    public Item(double price){
+        this.price = price;
     }
 
     public Item() {
@@ -19,11 +23,13 @@ public abstract class Item {
         this.price = price;
     }
 
-    public int getItemID() {
+    /*public int getItemID() {
         return itemID;
     }
 
     public void setItemID(int itemID) {
         this.itemID = itemID;
     }
+
+     */
 }
