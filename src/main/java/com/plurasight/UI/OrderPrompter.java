@@ -2,7 +2,7 @@ package com.plurasight.UI;
 
 import com.plurasight.Item.Chips;
 
-public class DecisionPrompter {
+public class OrderPrompter {
 
     public static Chips ChipPrompter(){
         System.out.println("Add 1 bag of Chips for 1.50? (yes/no)");

@@ -1,7 +1,8 @@
 package com.plurasight.menu;
 
-import com.plurasight.UI.DecisionPrompter;
+
 import com.plurasight.UI.InputPrompter;
+import com.plurasight.UI.OrderPrompter;
 import com.plurasight.UI.ScreenPrompter;
 import com.plurasight.abstraction.Item;
 
@@ -26,7 +27,7 @@ public class order {
                 System.out.println("working on adding drink");
                 break;
             case 3:
-                orderList.add(DecisionPrompter.ChipPrompter());
+                orderList.add(OrderPrompter.ChipPrompter());
                 orderScreen();
                 break;
             case 4:
