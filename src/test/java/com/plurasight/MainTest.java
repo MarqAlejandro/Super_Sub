@@ -1,29 +1,34 @@
 package com.plurasight;
 
+import com.plurasight.Item.Chips;
 import com.plurasight.abstraction.Item;
-import com.plurasight.menu.home;
 import com.plurasight.menu.order;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class MainTest {
 
-    public static void main(String[] args) {
+    @Test
+    void addItemToList_ShouldGetTotalPriceOfList() {
        //arrange
-        double actualListSizeResult;                //
-        double expectedListSizeResult = 4.50;      //price of 3 * 1.50
+        double actualListTotalResult;                //
+        double expectedListTotalResult = 4.50;      //price of 3 * 1.50
 
         //act
-        home.start();                               //this assumes that I go through the procedure of navigating through the menus and adding 1 chip to the List<Item>
+        order.orderList.add(new Chips(1.5));                               //this assumes that I go through the procedure of navigating through the menus and adding 3 chip to the List<Item>
+        order.orderList.add(new Chips(1.5));
+        order.orderList.add(new Chips(0.0));                               //simulates if you were to say no instead
+        order.orderList.add(new Chips(1.5));
 
-                                                    //also did a test where i messed up the input of yes, it creates an object with 0 value that will not add anything to the total
+
 
         //assert -- to get to this part of the code, one has to press 1. add sandwich when it is
-        actualListSizeResult = order.orderList.stream().map(Item::getPrice).reduce(0.0, (accumulator, price2) -> accumulator + price2); //should be at a size of 1
+        actualListTotalResult = order.orderList.stream().map(Item::getPrice).reduce(0.0, (accumulator, price2) -> accumulator + price2); //should be at a size of 1
 
-        System.out.println("expected: " + expectedListSizeResult + "\nactual: " + actualListSizeResult); //show the results of the test
+       // System.out.println("expected: " + expectedListTotalResult + "\nactual: " + actualListTotalResult); //show the results of the test
 
-        assertEquals(expectedListSizeResult, actualListSizeResult);
+       assertEquals(expectedListTotalResult, actualListTotalResult);
 
 
     }

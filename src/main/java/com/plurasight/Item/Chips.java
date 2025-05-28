@@ -9,6 +9,6 @@ public class Chips extends Item {
 
     @Override
     public double getPrice() {
-        return 1.50;
+        return price;
     }
 }
