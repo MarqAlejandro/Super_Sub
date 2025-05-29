@@ -19,6 +19,9 @@
  ### This is a screenshot showing unit testing for the List adding items properly.
  ![UnitTesting](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_2.png)
 
+ ### This is a screenshot of the program creating a sandwich with prompts and inputs from the user
+ ![Sandwich](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_4.png)
+
 
  ## My Favorite Block of Code
 
