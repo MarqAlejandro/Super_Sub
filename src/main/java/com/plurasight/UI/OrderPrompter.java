@@ -75,7 +75,11 @@ public class OrderPrompter {
             Bread bread = BreadType();
             List<Topping> toppingList = Toppings(size);
             boolean isToasted = Toasted();
-            double sandwichPrice = 5.50 + toppingList.stream().map(Topping::getPrice).reduce(0.0,(accumulator,price)-> accumulator += price);
+            double sandwichPrice = 5.50 + toppingPrice(toppingList);
+
+            toppingList.stream().map(Topping::getType).forEach(System.out::println);
+
+            System.out.println("Price: " + sandwichPrice);
             return new Sandwich("Sub",size,bread, isToasted, toppingList, sandwichPrice);
         }
 
@@ -83,7 +87,11 @@ public class OrderPrompter {
             Bread bread = BreadType();
             List<Topping> toppingList = Toppings(size);
             boolean isToasted = Toasted();
-            double sandwichPrice = 7.00 + toppingList.stream().map(Topping::getPrice).reduce(0.0,(accumulator,price)-> accumulator += price);
+            double sandwichPrice = 7.00 + toppingPrice(toppingList);
+
+            toppingList.stream().map(Topping::getType).forEach(System.out::println);
+
+            System.out.println("Price: " + sandwichPrice);
             return new Sandwich("Sub",size,bread, isToasted, toppingList, sandwichPrice);
 
         }
@@ -91,7 +99,7 @@ public class OrderPrompter {
             Bread bread = BreadType();
             List<Topping> toppingList = Toppings(size);
             boolean isToasted = Toasted();
-            double sandwichPrice = 8.50 + toppingList.stream().map(Topping::getPrice).reduce(0.0,(accumulator,price)-> accumulator += price);
+            double sandwichPrice = 8.50 + toppingPrice(toppingList);
             return new Sandwich("Sub",size,bread, isToasted, toppingList, sandwichPrice);
         }
         else{
@@ -99,6 +107,10 @@ public class OrderPrompter {
             return SandwichPrompter();
         }
 
+    }
+
+    public static double toppingPrice(List<Topping> toppingList){
+        return toppingList.stream().map(Topping::getPrice).reduce(0.0,(accumulator,price)-> accumulator += price);
     }
 
 
