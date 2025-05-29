@@ -1,6 +1,5 @@
 package com.plurasight.menu;
 
-
 import com.plurasight.UI.InputPrompter;
 import com.plurasight.UI.OrderPrompter;
 import com.plurasight.UI.ScreenPrompter;
@@ -21,10 +20,12 @@ public class order {
 
         switch (OrderScreenSelection) {
             case 1:
-                System.out.println("working on adding sandwich");
+                orderList.add(OrderPrompter.SandwichPrompter());
+                orderScreen();
                 break;
             case 2:
                 orderList.add(OrderPrompter.DrinkPrompter());
+                orderScreen();
                 break;
             case 3:
                 orderList.add(OrderPrompter.ChipPrompter());

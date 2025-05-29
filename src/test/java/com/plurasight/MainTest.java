@@ -16,10 +16,13 @@ class MainTest {
         double expectedListTotalResult = 4.50;      //price of 3 * 1.50
 
         //act
+
         order.orderList.add(new Chips(1.5,"Lays"));                               //this assumes that I go through the procedure of navigating through the menus and adding 3 chip to the List<Item>
         order.orderList.add(new Chips(1.5,"Ruffles"));
         order.orderList.add(new Chips(0.0,"Doritos"));                               //simulates if you were to say no instead
         order.orderList.add(new Chips(1.5,"Fritos"));
+
+
 
 
 

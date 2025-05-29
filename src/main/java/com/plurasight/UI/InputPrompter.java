@@ -16,9 +16,9 @@ public class InputPrompter {
 
             return singleString;
         } catch (Exception e) {
-            System.out.println("somehow an error with a String Variable");
+            System.out.println("somehow an error with a String Variable. Please try again");
+            return getSingleString();
         }
-        return singleString;
     }
 
     public static int getIntInput(){                            //using the getSingleString() method, assuming its correct, it parses the String into an int
@@ -29,9 +29,9 @@ public class InputPrompter {
             return convertedStringToInt;
         }
         catch (InputMismatchException e){
-            System.out.println("String Input Failed to Convert, most like due to it not being a number");
+            System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
+            return getIntInput();
         }
-        return convertedStringToInt;
     }
 
     public static double getDoubleInput(){                    //using the getSingleString() method, assuming its correct, it parses the String into a double
@@ -42,22 +42,32 @@ public class InputPrompter {
             return convertedStringToDouble;
         }
         catch (InputMismatchException e){
-            System.out.println("String Input Failed to Convert, most like due to it not being a number");
+            System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
+            return getDoubleInput();
         }
-        return convertedStringToDouble;
+
     }
 
     public static boolean getBooleanInput(){
-        boolean convertedStringToBoolean = false;
         try{
-            convertedStringToBoolean = Boolean.parseBoolean(getSingleString());
+            String UserInput = getSingleString();
+            if(UserInput.equalsIgnoreCase("yes")) {
+                return true;
+            }
+            else if(UserInput.equalsIgnoreCase("no")){
+                return false;
+            }
+            else{
+                System.out.println("Input is neither a yes or a no. Please try again");
+                return getBooleanInput();
+            }
 
-            return convertedStringToBoolean;
         }
-        catch (InputMismatchException e){
-            System.out.println("String Input Failed to Convert, need exactly \"true\" or \"false\".");
+        catch (Exception e){
+            System.out.println("String Input Failed to Convert, Please check your input.");
+            return getBooleanInput();
         }
-        return convertedStringToBoolean;
+
     }
 
 
