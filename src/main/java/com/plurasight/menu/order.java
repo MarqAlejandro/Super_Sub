@@ -32,10 +32,11 @@ public class order {
                 orderScreen();
                 break;
             case 4:
-                System.out.println("working on Check-Out");
+                checkout.checkoutScreen();
                 break;
             case 5:
                 System.out.println("Exiting to Home Screen...");
+                orderList.clear();
                 home.homeScreen();
                 break;
             default:

@@ -3,11 +3,7 @@ package com.plurasight.menu;
 import com.plurasight.UI.ScreenPrompter;
 import com.plurasight.UI.InputPrompter;
 
-import java.util.Scanner;
-
-
 public class home {
-   static Scanner scanner = new Scanner(System.in);
 
     public static void start(){
         System.out.println("Hello User, Welcome to " +
@@ -21,8 +17,6 @@ public class home {
                         );
 
         homeScreen();
-
-
 
     }
 

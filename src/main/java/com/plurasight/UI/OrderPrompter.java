@@ -16,7 +16,7 @@ import static com.plurasight.UI.IngredientPrompter.*;
 public class OrderPrompter {
 //-------------------------------------------------------------------------------------------for Chips
     public static Chips ChipPrompter(){
-        System.out.println("Add 1 bag of Chips for $1.50? (yes/no)");
+        System.out.println("Add 1 bag of Chips for $1.50? (yes/no)\n");
 
         String UserSelection = InputPrompter.getSingleString();
 
@@ -33,13 +33,13 @@ public class OrderPrompter {
     }
 
     private static String ChipType(){
-        System.out.println("Which brand of Chips would you like?");
+        System.out.println("Which type of Chips would you like?\n");
         return InputPrompter.getSingleString();
     }
 
 //----------------------------------------------------------------------------------------for Drinks
     public static Drink DrinkPrompter(){
-        System.out.println("What size drink would like? (small for $2.00\tmedium for $2.50\tlarge for 3.00)\ncancel drink by leaving blank");
+        System.out.println("What size drink would like? (small for $2.00\tmedium for $2.50\tlarge for 3.00)\n\ncancel drink by leaving blank\n");
 
         String size = InputPrompter.getSingleString();
 
@@ -61,7 +61,7 @@ public class OrderPrompter {
         }
     }
     private static String DrinkType(){
-        System.out.println("What type of drink would you like?");
+        System.out.println("What type of drink would you like?\n");
         return InputPrompter.getSingleString();
     }
 //--------------------------------------------------------------------------------------------for Sandwiches
@@ -76,10 +76,6 @@ public class OrderPrompter {
             List<Topping> toppingList = Toppings(size);
             boolean isToasted = Toasted();
             double sandwichPrice = 5.50 + toppingPrice(toppingList);
-
-            toppingList.stream().map(Topping::getType).forEach(System.out::println);
-
-            System.out.println("Price: " + sandwichPrice);
             return new Sandwich("Sub",size,bread, isToasted, toppingList, sandwichPrice);
         }
 
@@ -88,10 +84,6 @@ public class OrderPrompter {
             List<Topping> toppingList = Toppings(size);
             boolean isToasted = Toasted();
             double sandwichPrice = 7.00 + toppingPrice(toppingList);
-
-            toppingList.stream().map(Topping::getType).forEach(System.out::println);
-
-            System.out.println("Price: " + sandwichPrice);
             return new Sandwich("Sub",size,bread, isToasted, toppingList, sandwichPrice);
 
         }

@@ -4,18 +4,19 @@ import com.plurasight.Ingredient.Bread;
 import com.plurasight.Ingredient.Topping;
 import com.plurasight.abstraction.Item;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Sandwich extends Item {
     private int size;
     private Bread bread;
-    private List<Topping> toppings = new ArrayList<>();
+    private List<Topping> toppings;
     private boolean isToasted;
 
 
-    public Sandwich(String nameBrand, int size, Bread bread, boolean isToasted, List<Topping> toppings, double price) {
-        super(price, nameBrand);
+    public Sandwich(String type, int size, Bread bread, boolean isToasted, List<Topping> toppings, double price) {
+        super(price, type);
         this.size = size;
         this.bread = bread;
         this.isToasted = isToasted;
@@ -28,12 +29,13 @@ public class Sandwich extends Item {
         this.isToasted = isToasted;
     }
 
-
-    public void printToppings(){
-        toppings.stream().map(Topping::getType).forEach(System.out::println);
+    public StringBuilder writeToppings(){
+        StringBuilder toppingsConvertedString = new StringBuilder("");
+        for(Topping topping : toppings){
+           toppingsConvertedString.append(" + " + topping.getType() + " \n");
+        }
+        return toppingsConvertedString;
     }
-
-
 
     public int getSize() {
         return size;
@@ -68,7 +70,12 @@ public class Sandwich extends Item {
     }
 
     @Override
+    public String getType(){
+        return type;
+    }
+    @Override
     public double getPrice() {
         return price;
     }
+
 }

@@ -32,6 +32,10 @@ public class InputPrompter {
             System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
             return getIntInput();
         }
+        catch (NumberFormatException eN){
+            System.out.println("String Input Failed to Convert, can't convert a letter into a number. Please try again");
+            return getIntInput();
+        }
     }
 
     public static double getDoubleInput(){                    //using the getSingleString() method, assuming its correct, it parses the String into a double

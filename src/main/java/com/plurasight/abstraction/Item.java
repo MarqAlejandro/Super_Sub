@@ -3,7 +3,7 @@ package com.plurasight.abstraction;
 public abstract class Item {
     protected double price;
     //protected int itemID;
-    protected String nameBrand;
+    protected String type;
 
    /* public Item(double price, int itemID, String nameBrand) {                     //wanted to implement an item cataloging system. but didn't have time
         this.price = price;
@@ -13,9 +13,9 @@ public abstract class Item {
 
     */
 
-    public Item(double price, String nameBrand){
+    public Item(double price, String type){
         this.price = price;
-        this.nameBrand = nameBrand;
+        this.type = type;
     }
 
     public Item() {
@@ -38,11 +38,9 @@ public abstract class Item {
 
      */
 
-    public String getNameBrand() {
-        return nameBrand;
-    }
+    public abstract String getType();
 
-    public void setNameBrand(String nameBrand) {
-        this.nameBrand = nameBrand;
+    public void setType(String type) {
+        this.type = type;
     }
 }

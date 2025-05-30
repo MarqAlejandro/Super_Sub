@@ -38,19 +38,24 @@ public class IngredientPrompter {
     }
 
     private static boolean addMore(){
-        System.out.println("Would you like to add more?");
+        System.out.println("Would you like to add more?\n");
         String additionalDecision = InputPrompter.getSingleString();
 
         if(additionalDecision.equalsIgnoreCase("yes")){
             return true;
         }
-        else{
+        else if(additionalDecision.equalsIgnoreCase("no")){
             return false;
+        }
+        else{
+            System.out.println("Input was neither a yes or a no. Please try again");
+            return addMore();
         }
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>sub set of toppings - for meats
-    private static Meat MeatPrompter(int size){
+    private static Topping MeatPrompter(int size){
        ScreenPrompter.meatPrompter();
+        System.out.println();
 
         String meatSelection = InputPrompter.getSingleString();
         if(!meatSelection.isBlank()) {
@@ -70,6 +75,7 @@ public class IngredientPrompter {
 
     private static double extraMeat(int size){
       ScreenPrompter.extraMeatPrompter();
+        System.out.println();
         boolean isExtra = InputPrompter.getBooleanInput();
         if(isExtra){
             if(size == 4){
@@ -88,8 +94,9 @@ public class IngredientPrompter {
         }
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>sub set of toppings - for cheeses
-    private static Cheese CheesePrompter(int size){
+    private static Topping CheesePrompter(int size){
        ScreenPrompter.cheesePrompter();
+        System.out.println();
         String cheeseSelection = InputPrompter.getSingleString();
         if(!cheeseSelection.isBlank()) {
             if (size == 4) {
@@ -108,6 +115,7 @@ public class IngredientPrompter {
 
     private static double extraCheese(int size){
       ScreenPrompter.extraCheesePrompter();
+        System.out.println();
         boolean isExtra = InputPrompter.getBooleanInput();
         if(isExtra){
             if(size == 4){

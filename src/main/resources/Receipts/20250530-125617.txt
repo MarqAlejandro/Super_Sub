@@ -1,0 +1,28 @@
+             super(Sub)
+
+     Address: 1234 New York, NY
+          Tel: 123-456-7890
+
+************************************
+               RECEIPT
+************************************
+
+Item                           Price
+lays                          1.50
+doritos                       1.50
+small cola                    2.00
+large sprite                    3.00
+Sub                           7.25
+4" on white - Toasted
+ + ham 
+ + swiss 
+ + lettuce 
+ + tomatoes 
+ + mushrooms 
+ + mayo 
+ + ranch 
+ + au jus 
+ + chillies 
+------------------------------------
+Total:                       15.25
+************************************
