@@ -6,7 +6,11 @@
 
  ## Features
 
- fill this in later
+ 4 main screens - Home, Order, Sandwich, Check-out.
+   - Home has 2 options - start a new order, or exit the program.
+   - Order has 5 options, 3 of which add an item to the order, 4th one leads to the check-out screen, 5th is back to the home screen.
+   - Sandwich isn't a typical screen menu, instead it walks you through the toppings and ingredients.
+   - Check out will display the order on the terminal and asked for confirmation of the order, or to cancel the order and go back to the home screen
 
 ## Screenshots of output/progression
 
@@ -22,10 +26,15 @@
  ### This is a screenshot of the program creating a sandwich with prompts and inputs from the user
  ![Sandwich](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_4.png)
 
+ ### This is a screenshot of the .txt file receipt that is created
+ ![receipt](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_5.png)
 
- ## My Favorite Block of Code
+ ## My Favorite Block of Code(s)
+ ![](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_6.png)
+ ![](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_7.png)
+ ![](https://github.com/MarqAlejandro/Super_Sub/blob/main/screenshots/img_8.png)
 
- fill in later
+ 
 
  
 
