@@ -3,9 +3,6 @@ package com.plurasight.Item;
 import com.plurasight.Ingredient.Bread;
 import com.plurasight.Ingredient.Topping;
 import com.plurasight.abstraction.Item;
-
-import java.io.FileWriter;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Sandwich extends Item {

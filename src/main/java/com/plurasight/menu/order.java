@@ -35,7 +35,7 @@ public class order {
                 checkout.checkoutScreen();
                 break;
             case 5:
-                System.out.println("Exiting to Home Screen...");
+                System.out.println("Traveling to Home Screen...");
                 orderList.clear();
                 home.homeScreen();
                 break;

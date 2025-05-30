@@ -18,7 +18,7 @@ public class ReceiptWriter {
 
     private static File file = new File("src/main/resources/Receipts/" + formattedDateTime + ".txt");
 
-    public static void printReceipt(){
+    public static void printReceipt(){                                  //constructs a receipt in a .txt file
 
         try {
             FileWriter fileWriter = new FileWriter(file);
@@ -52,7 +52,7 @@ public class ReceiptWriter {
 
             fileWriter.write("------------------------------------");
             fileWriter.write(String.format("\nTotal:                  %10.2f\n" ,order.orderList.stream().map(Item::getPrice).reduce(0.0,(accumulator,price) -> accumulator += price)));
-            fileWriter.write("************************************");
+            fileWriter.write("************************************\n");
             fileWriter.write("       Thank you, Come Again        ");
 
 
