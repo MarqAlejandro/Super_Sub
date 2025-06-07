@@ -1,9 +1,9 @@
-package com.plurasight.UI;
+package com.plurasight.ui;
 
-import com.plurasight.Ingredient.Bread;
-import com.plurasight.Ingredient.Cheese;
-import com.plurasight.Ingredient.Meat;
-import com.plurasight.Ingredient.Topping;
+import com.plurasight.ingredient.Bread;
+import com.plurasight.ingredient.Cheese;
+import com.plurasight.ingredient.Meat;
+import com.plurasight.ingredient.Topping;
 
 import java.util.ArrayList;
 import java.util.List;

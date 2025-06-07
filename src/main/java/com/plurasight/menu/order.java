@@ -1,8 +1,8 @@
 package com.plurasight.menu;
 
-import com.plurasight.UI.InputPrompter;
-import com.plurasight.UI.OrderPrompter;
-import com.plurasight.UI.ScreenPrompter;
+import com.plurasight.ui.InputPrompter;
+import com.plurasight.ui.OrderPrompter;
+import com.plurasight.ui.ScreenPrompter;
 import com.plurasight.abstraction.Item;
 
 import java.util.ArrayList;

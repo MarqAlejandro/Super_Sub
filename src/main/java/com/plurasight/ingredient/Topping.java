@@ -1,4 +1,4 @@
-package com.plurasight.Ingredient;
+package com.plurasight.ingredient;
 
 import com.plurasight.abstraction.Ingredient;
 

@@ -1,4 +1,4 @@
-package com.plurasight.Item;
+package com.plurasight.item;
 
 import com.plurasight.abstraction.Item;
 

@@ -1,17 +1,14 @@
-package com.plurasight.UI;
+package com.plurasight.ui;
 
-import com.plurasight.Ingredient.Bread;
-import com.plurasight.Ingredient.Cheese;
-import com.plurasight.Ingredient.Meat;
-import com.plurasight.Ingredient.Topping;
-import com.plurasight.Item.Chips;
-import com.plurasight.Item.Drink;
-import com.plurasight.Item.Sandwich;
+import com.plurasight.ingredient.Bread;
+import com.plurasight.ingredient.Topping;
+import com.plurasight.item.Chips;
+import com.plurasight.item.Drink;
+import com.plurasight.item.Sandwich;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static com.plurasight.UI.IngredientPrompter.*;
+import static com.plurasight.ui.IngredientPrompter.*;
 
 public class OrderPrompter {
 //-------------------------------------------------------------------------------------------for Chips

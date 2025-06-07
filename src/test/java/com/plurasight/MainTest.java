@@ -1,6 +1,6 @@
 package com.plurasight;
 
-import com.plurasight.Item.Chips;
+import com.plurasight.item.Chips;
 import com.plurasight.abstraction.Item;
 import com.plurasight.menu.order;
 

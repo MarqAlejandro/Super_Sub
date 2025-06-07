@@ -1,7 +1,7 @@
-package com.plurasight.Item;
+package com.plurasight.item;
 
-import com.plurasight.Ingredient.Bread;
-import com.plurasight.Ingredient.Topping;
+import com.plurasight.ingredient.Bread;
+import com.plurasight.ingredient.Topping;
 import com.plurasight.abstraction.Item;
 import java.util.List;
 

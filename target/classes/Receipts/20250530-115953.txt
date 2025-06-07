@@ -1,0 +1,42 @@
+             super(Sub)
+
+     Address: 1234 New York, NY
+          Tel: 123-456-7890
+
+************************************
+               RECEIPT
+************************************
+
+Item                           Price
+Sub                           9.50
+4" on white - Toasted
+ + steak 
+ + ham 
+ + american 
+ + swiss 
+ + lettuce 
+ + peppers 
+ + mayo 
+ + sauce 
+small cola                    2.00
+medium sprite                    2.50
+lays                          1.50
+Sub                          10.50
+8" on wheat - Toasted
+ + steak 
+ + swiss 
+ + mayo 
+Sub                           7.25
+4" on wheat - 
+ + ham 
+ + swiss 
+ + lettuce 
+Sub                           5.50
+4" on white - Toasted
+ + N/A 
+ + N/A 
+ + mayo 
+------------------------------------
+Total:                       38.75
+************************************
+       Thank you, Come Again        

@@ -1,16 +1,16 @@
-package com.plurasight.UI;
+package com.plurasight.ui;
 
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputPrompter {
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static String getSingleString(){                     //prompt the user for input, returns a String
         String singleString = "";
         try {
             System.out.print("Enter: ");
-            Scanner scanner = new Scanner(System.in);
             singleString = scanner.nextLine().trim().toLowerCase();
             System.out.println();
 

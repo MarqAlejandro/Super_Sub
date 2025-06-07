@@ -1,12 +1,13 @@
 package com.plurasight.receipt;
 
-import com.plurasight.Item.Sandwich;
+import com.plurasight.item.Sandwich;
 import com.plurasight.abstraction.Item;
 import com.plurasight.menu.order;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -16,7 +17,7 @@ public class ReceiptWriter {
     private static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
     private static String formattedDateTime = DATETIME.format(dateTimeFormatter);
 
-    private static File file = new File("src/main/resources/Receipts/" + formattedDateTime + ".txt");
+    private static File file = new File(Paths.get("Receipts") + formattedDateTime + ".txt");
 
     public static void printReceipt(){                                  //constructs a receipt in a .txt file
 

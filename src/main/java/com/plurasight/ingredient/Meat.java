@@ -1,4 +1,4 @@
-package com.plurasight.Ingredient;
+package com.plurasight.ingredient;
 
 public class Meat extends Topping{
 

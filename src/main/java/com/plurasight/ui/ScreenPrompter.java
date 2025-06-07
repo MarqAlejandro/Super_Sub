@@ -1,6 +1,6 @@
-package com.plurasight.UI;
+package com.plurasight.ui;
 
-import com.plurasight.Item.Sandwich;
+import com.plurasight.item.Sandwich;
 import com.plurasight.abstraction.Item;
 import com.plurasight.menu.order;
 
