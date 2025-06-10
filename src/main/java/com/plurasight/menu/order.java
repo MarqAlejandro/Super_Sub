@@ -10,7 +10,7 @@ import java.util.List;
 
 public class order {
 
-    public static List<Item> orderList = new ArrayList<>();
+    public static List<Item> orderList = new ArrayList<>(); //private
 
 
 

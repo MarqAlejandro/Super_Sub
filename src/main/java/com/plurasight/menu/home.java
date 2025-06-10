@@ -5,7 +5,7 @@ import com.plurasight.ui.InputPrompter;
 
 public class home {
 
-    public static void start(){
+    public void start(){
         System.out.println("Hello User, Welcome to " +
                         "\n" +
                         "                            _ __                            / /              ___            _                \\ \\    \n" +
@@ -21,21 +21,7 @@ public class home {
     }
 
     public static void homeScreen(){
-            ScreenPrompter.homeScreen();
-            int HomeScreenSelection = InputPrompter.getIntInput();
 
-            switch (HomeScreenSelection) {
-                case 1:
-                    order.orderScreen();
-                    break;
-                case 2:
-                    exit();
-                    break;
-                default:
-                    System.out.println("Input was not one of the following. Please Try Again");
-                    homeScreen();
-
-            }
 
 
     }

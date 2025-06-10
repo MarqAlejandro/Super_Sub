@@ -29,7 +29,7 @@ public class Sandwich extends Item {
     public StringBuilder writeToppings(){
         StringBuilder toppingsConvertedString = new StringBuilder("");
         for(Topping topping : toppings){
-           toppingsConvertedString.append(" + " + topping.getType() + " \n");
+           toppingsConvertedString.append(" + " + topping.getType() + " \n");           // include price
         }
         return toppingsConvertedString;
     }

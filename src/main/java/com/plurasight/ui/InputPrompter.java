@@ -23,53 +23,53 @@ public class InputPrompter {
 
     public static int getIntInput(){                            //using the getSingleString() method, assuming its correct, it parses the String into an int
         int convertedStringToInt = 0;
-        try{
-            convertedStringToInt = Integer.parseInt(getSingleString());
+        while(true) {
+            try {
+                convertedStringToInt = Integer.parseInt(getSingleString());
 
-            return convertedStringToInt;
-        }
-        catch (InputMismatchException e){
-            System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
-            return getIntInput();
-        }
-        catch (NumberFormatException eN){
-            System.out.println("String Input Failed to Convert, can't convert a letter into a number. Please try again");
-            return getIntInput();
+                return convertedStringToInt;
+            } catch (InputMismatchException e) {
+                System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
+                return convertedStringToInt;
+            } catch (NumberFormatException eN) {
+                System.out.println("String Input Failed to Convert, can't convert a letter into a number. Please try again");
+                return convertedStringToInt;
+            }
         }
     }
 
     public static double getDoubleInput(){                    //using the getSingleString() method, assuming its correct, it parses the String into a double
-        double convertedStringToDouble = 0;
-        try{
-            convertedStringToDouble = Double.parseDouble(getSingleString());
+       while(true) {
+           double convertedStringToDouble = 0;
+           try {
+               convertedStringToDouble = Double.parseDouble(getSingleString());
 
-            return convertedStringToDouble;
-        }
-        catch (InputMismatchException e){
-            System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
-            return getDoubleInput();
-        }
+               return convertedStringToDouble;
+           } catch (InputMismatchException e) {
+               System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
+               return getDoubleInput();
+           }
+       }
 
     }
 
     public static boolean getBooleanInput(){
-        try{
-            String UserInput = getSingleString();
-            if(UserInput.equalsIgnoreCase("yes")) {
-                return true;
-            }
-            else if(UserInput.equalsIgnoreCase("no")){
-                return false;
-            }
-            else{
-                System.out.println("Input is neither a yes or a no. Please try again");
+        while(true) {
+            try {
+                String UserInput = getSingleString();
+                if (UserInput.equalsIgnoreCase("yes")) {
+                    return true;
+                } else if (UserInput.equalsIgnoreCase("no")) {
+                    return false;
+                } else {
+                    System.out.println("Input is neither a yes or a no. Please try again");
+                    return getBooleanInput();
+                }
+
+            } catch (Exception e) {
+                System.out.println("String Input Failed to Convert, Please check your input.");
                 return getBooleanInput();
             }
-
-        }
-        catch (Exception e){
-            System.out.println("String Input Failed to Convert, Please check your input.");
-            return getBooleanInput();
         }
 
     }
