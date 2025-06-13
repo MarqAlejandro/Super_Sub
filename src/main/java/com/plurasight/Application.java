@@ -9,7 +9,7 @@ import static com.plurasight.menu.home.homeScreen;
 
 public class Application {
 
-    public Application start(){
+    public void start(){
 
         System.out.println("Hello User, Welcome to " +
                 "\n" +

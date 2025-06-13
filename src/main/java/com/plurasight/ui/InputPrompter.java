@@ -47,7 +47,7 @@ public class InputPrompter {
                return convertedStringToDouble;
            } catch (InputMismatchException e) {
                System.out.println("String Input Failed to Convert, most like due to it not being a number. Please try again");
-               return getDoubleInput();
+               return convertedStringToDouble;
            }
        }
 
